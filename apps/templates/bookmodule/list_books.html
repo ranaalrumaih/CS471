@@ -1,0 +1,31 @@
+{% extends "layouts/base.html" %}
+
+{% load static %}
+
+{% block title %}
+List Books
+{% endblock title %}
+
+{% block content %}
+
+<h1>List Books</h1>
+
+<h2>Book 1</h2>
+
+<p>This is the first book.</p>
+
+<img src="{% static 'book1.jpg' %}" alt="Book 1" width="200">
+
+<h2>Book 2</h2>
+
+<p>This is the second book.</p>
+
+<img src="{% static 'book2.jpg' %}" alt="Book 2" width="200">
+
+<h2>Book 3</h2>
+
+<p>This is the third book.</p>
+
+<img src="{% static 'book3.jpg' %}" alt="Book 3" width="200">
+
+{% endblock content %}

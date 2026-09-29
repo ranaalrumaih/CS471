@@ -1,0 +1,21 @@
+{% extends "layouts/base.html" %}
+
+{% load static %}
+
+{% block title %}
+One Book
+{% endblock title %}
+
+{% block content %}
+
+<h1>One Book</h1>
+
+<h2>Book 1</h2>
+
+<img src="{% static 'book1.jpg' %}" alt="Book 1" width="200">
+
+<p>
+    This page displays information about one book.
+</p>
+
+{% endblock content %}
