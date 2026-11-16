@@ -1,0 +1,19 @@
+{% extends "layouts/base.html" %}
+
+{% block title %}Edit Book{% endblock title %}
+
+{% block content %}
+
+<h1>Edit Book Using Django Forms</h1>
+
+<form method="post">
+
+    {% csrf_token %}
+
+    {{ form.as_p }}
+
+    <button type="submit">Update Book</button>
+
+</form>
+
+{% endblock content %}

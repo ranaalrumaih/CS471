@@ -1,0 +1,19 @@
+{% extends "layouts/base.html" %}
+
+{% block title %}Lab 8 Task 2{% endblock title %}
+
+{% block content %}
+<h1>Books with edition greater than 3 and title or author containing co</h1>
+
+{% for book in books %}
+    <p>
+        {{ book.title }} |
+        {{ book.author }} |
+        Edition: {{ book.edition }}
+    </p>
+    <hr>
+{% empty %}
+    <p>No books found.</p>
+{% endfor %}
+
+{% endblock content %}

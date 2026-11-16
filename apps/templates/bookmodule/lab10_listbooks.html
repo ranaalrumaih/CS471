@@ -1,0 +1,41 @@
+{% extends "layouts/base.html" %}
+
+{% block title %}List Books{% endblock title %}
+
+{% block content %}
+
+<h1>Books List</h1>
+
+<a href="/books/lab9_part1/addbook">Add New Book</a>
+
+<hr>
+
+{% for book in books %}
+
+    <p>
+
+        ID: {{ book.id }} |
+
+        Title: {{ book.title }} |
+
+        Author: {{ book.author }} |
+
+        Price: {{ book.price }} |
+
+        Edition: {{ book.edition }}
+
+    </p>
+
+    <a href="/books/lab9_part1/editbook/{{ book.id }}">Edit</a>
+
+    <a href="/books/lab9_part1/deletebook/{{ book.id }}">Delete</a>
+
+    <hr>
+
+{% empty %}
+
+    <p>No books found.</p>
+
+{% endfor %}
+
+{% endblock content %}

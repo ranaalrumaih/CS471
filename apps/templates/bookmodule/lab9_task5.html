@@ -1,0 +1,18 @@
+{% extends "layouts/base.html" %}
+
+{% block title %}Lab 9 Task 5{% endblock title %}
+
+{% block content %}
+<h1>Publishers and Highly Rated Books</h1>
+
+{% for publisher in publishers %}
+    <p>
+        Publisher: {{ publisher.name }} |
+        Highly Rated Books: {{ publisher.highly_rated_count }}
+    </p>
+    <hr>
+{% empty %}
+    <p>No publishers found.</p>
+{% endfor %}
+
+{% endblock content %}

@@ -1,0 +1,18 @@
+{% extends "layouts/base.html" %}
+
+{% block title %}Lab 9 Task 4{% endblock title %}
+
+{% block content %}
+<h1>Book Prices for Each Publisher</h1>
+
+{% for publisher in publishers %}
+    <p>Publisher: {{ publisher.name }}</p>
+    <p>Average Price: {{ publisher.average_price|default:0 }}</p>
+    <p>Minimum Price: {{ publisher.minimum_price|default:0 }}</p>
+    <p>Maximum Price: {{ publisher.maximum_price|default:0 }}</p>
+    <hr>
+{% empty %}
+    <p>No publishers found.</p>
+{% endfor %}
+
+{% endblock content %}
